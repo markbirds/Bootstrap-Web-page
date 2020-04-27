@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Python in Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+  	*{font-size: 18px;}
+  	  body {
+      position: relative; 
+  	}
+  	.spinnerBox{
+  		width: 25px;
+  		height: 25px;
+  		position: fixed;
+  		top: 50%;
+  		left: 50%;
+  		margin-left: -25px;
+  		margin-top: -25px;
+  	}
+  	.cardBox{
+  		position: fixed;
+  		top: 50%;
+  		left: 50%;
+  		width: 350px;
+  		margin-left: -175px;
+  		margin-top: -100px;
+  	}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" id="top">
+
+<div class="containe0r-fluid p-0">
+	<img src="images/header.jpg" style="width: 100%;">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top px-4" style="height: 60px;">
+	  	<a class="navbar-brand" href="#top">
+	  		<img src="images/logo.png" style="height: 40px;">
+	  	</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+	  	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    	<ul class="navbar-nav" id="python">
+	      		<li class="nav-item px-1 active">
+	        		<a class="nav-link" href="#python" style="font-size: 20px;">What is Python?</a>
+	      		</li>
+	      		<li class="nav-item px-1">
+	        		<a class="nav-link" href="#code" style="font-size: 20px;">Code Syntax</a>
+	      		</li>
+	      		<li class="nav-item px-1">
+	        		<a class="nav-link" href="#quiz" style="font-size: 20px;">Take a Quiz</a>
+	      		</li>    
+	    	</ul>
+	  </div>  
+</nav>
+ <div class="row">
+    <div class="col-sm-4 p-5">
+		<div class="card pt-3">
+			<h4 class="card-title text-center mx-2">Author</h4>
+		    <img class="card-img-top" src="images/author.jpg" alt="Card image" style="width:100%">
+		    <div class="card-body">
+		      	<h4 class="card-title text-center">Guido van Rossum</h4>
+		      	<p class="card-text text-center">Guido van Rossum at the Dropbox headquarters in 2014</p>
+		      	<div class="text-center">
+		      		<a href="#demo" class="btn btn-dark" data-toggle="collapse">See Profile</a>
+		      	</div>	      	
+		      	<div id="demo" class="collapse pt-2">
+				<p class="my-1"><strong>Born: </strong>31 January 1956 (age 64) Haarlem, Netherlands</p>
+				<p class="my-1"><strong>Nationality: </strong>Dutch</p>
+				<p class="my-1"><strong>Alma mater: </strong>University of Amsterdam</p>
+				<p class="my-1"><strong>Occupation: </strong>Computer programmer, author</p>
+				<p class="my-1"><strong>Known for: </strong>Creating the Python programming language</p>
+				<p class="my-1"><strong>Spouse(s): </strong>Kim Knapp (m. 2000)</p>
+				<p class="my-1"><strong>Children: </strong>1</p>
+				<p class="my-1"><strong>Awards: </strong>Award for the Advancement of Free Software (2001)</p>
+				<p class="my-1"><strong>Website: </strong><a href="https://gvanrossum.github.io/" target="_blank">gvanrossum.github.io</a></p>
+				</div>
+	    	</div>		
+  		</div>
+  		<div id="accordion" class="mt-3 sticky-top" style="padding-top: 60px;">
+		    <div class="card">
+		      	<div class="card-header bg-dark">
+		        	<a class="card-link text-light" data-toggle="collapse" href="#collapseOne">
+		          	Download Python
+		        	</a>
+		      	</div>
+		      	<div id="collapseOne" class="collapse show" data-parent="#accordion">
+		        	<div class="card-body pb-2">
+					<p>Download the latest version for Windows
+					<a href="https://www.python.org/downloads/" target="_blank">
+						https://www.python.org/downloads/
+					</a></p>
+		        	</div>
+		      	</div>
+		    </div>
+		    <div class="card">
+		      	<div class="card-header bg-dark">
+		        	<a class="collapsed card-link text-light" data-toggle="collapse" href="#collapseTwo">
+		        	Learn Python
+		      		</a>
+		      	</div>
+		      	<div id="collapseTwo" class="collapse" data-parent="#accordion">
+			        <div class="card-body pb-2">
+			          	<p>
+				          	<a href="https://www.w3schools.com/python/" target="_blank">
+				          	Python Tutorial - W3Schools</a>
+			          	</p>
+			          	<p>
+				          	<a href="https://www.tutorialspoint.com/python/index.htm" target="_blank">
+				          	Python Tutorial - Tutorialspoint</a>
+			          	</p>
+			          	<p>
+				          	<a href="https://www.learnpython.org/" target="_blank">
+				          	Learn Python - Free Interactive Python Tutorial</a>
+			          	</p>
+			          	<p>
+				          	<a href="https://www.programiz.com/python-programming" target="_blank">
+				          	Learn Python Programming | Programiz</a>
+			          	</p>
+			        </div>
+		      	</div>
+		    </div>
+		    <div class="card">
+		      	<div class="card-header bg-dark">
+			        <a class="collapsed card-link text-light" data-toggle="collapse" href="#collapseThree">
+			          Learn Tkinter
+			        </a>
+		      	</div>
+		      	<div id="collapseThree" class="collapse" data-parent="#accordion">
+			        <div class="card-body pb-2">
+			          	<p>
+				          	<a href="https://likegeeks.com/python-gui-examples-tkinter-tutorial/" target="_blank">
+				          	Python GUI examples (Tkinter Tutorial) - Like Geeks</a>
+			          	</p>
+			          	<p>
+				          	<a href="https://www.tutorialspoint.com/python/python_gui_programming.htm" target="_blank">
+				          	Python - GUI Programming (Tkinter) - Tutorialspoint</a>
+			          	</p>
+			          	<p>
+				          	<a href="https://www.geeksforgeeks.org/python-gui-tkinter/" target="_blank">
+				          	Python GUI - tkinter - GeeksforGeeks</a>
+			          	</p>
+			          	<p>
+				          	<a href="https://www.javatpoint.com/python-tkinter" target="_blank">
+				          	Python Tkinter Tutorial - Javatpoint</a>
+			          	</p>
+			        </div>
+		      	</div>
+		    </div>
+		</div> <!--accordion-->
+	</div> <!--col-sm-4 p-5-->
+
+    <div class="col-sm-8 p-5">
+    	<div> <!--What is Python?-->
+    		<h2 class="pb-3">What is Python?</h2>
+    		<p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+    		<p>It is used for:</p>
+    		<ul>
+    			<li>web development (server-side),</li>
+    			<li>software development,</li>
+    			<li>mathematics,</li>
+    			<li>system scripting.</li>
+    		</ul>
+    		<h4 class="py-2">What can Python do?</h4>
+    		<ul>
+    			<li>Python can be used on a server to create web applications.</li>
+    			<li>Python can be used alongside software to create workflows.</li>
+    			<li>Python can connect to database systems. It can also read and modify files.</li>
+    			<li>Python can be used to handle big data and perform complex mathematics.</li>
+    			<li>Python can be used for rapid prototyping, or for production-ready software development.</li>
+    		</ul>
+    		<h4 class="py-2">Why Python?</h4>
+    		<ul>
+    			<li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+    			<li>Python has a simple syntax similar to the English language.</li>
+    			<li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
+    			<li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+    			<li>Python can be treated in a procedural way, an object-orientated way or a functional way.
+    			</li>
+    		</ul>
+    		<h4 class="py-2">Good to know</h4>
+    		<ul>
+    			<li>The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular.</li>
+    			<li>In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.</li>
+    		</ul>
+    		<h4 class="py-2">Python Syntax compared to other programming languages</h4>
+    		<ul>
+    			<li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
+    			<li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</li>
+    			<li id="code">Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</li>
+    		</ul>
+    	</div><!--What is Python?-->
+    	<div>
+    		<h2 class="mt-5 pb-3">Code Syntax</h2>
+    		<h4 class="py-3">Print Statement</h4>
+    		<div class="p-3 bg-dark"> 
+    			<code class="text-light" style="font-size: 18px;">
+    				print("Hello, World!")
+    			</code>
+    		</div>
+    		<h4 class="py-3">Output</h4>
+    		<div class="shadow p-4 mb-4 bg-white" style="font-size: 20px;">Hello, World!</div>
+    		<h4 class="py-3">Comments</h4>
+    		<div class="p-3 bg-dark"> 
+    			<code class="text-light" style="font-size: 18px;">
+    				#This is a comment <br>
+					print("Hello, World!") <br>
+    			</code>
+    		</div>
+    		<h4 class="py-3">Output</h4>
+    		<div class="shadow p-4 mb-4 bg-white" style="font-size: 20px;">Hello, World!</div>
+    		<h4 class="py-3">If Statements</h4>
+    		<div class="p-3 bg-dark"> 
+    			<code class="text-light" style="font-size: 18px;">
+    				a = 200 <br>
+					b = 33 <br>
+					if b > a: <br>
+					<p style="display: inline-block;text-indent: 2em;" class="m-0">print("b is greater than a") </p><br>
+					elif a == b: <br>
+					<p style="display: inline-block;text-indent: 2em;" class="m-0">print("a and b are equal") </p><br>
+					else: <br>
+					<p style="display: inline-block;text-indent: 2em;" class="m-0">print("a is greater than b") </p><br>
+    			</code>
+    		</div>
+    		<h4 class="py-3">Output</h4>
+    		<div class="shadow p-4 mb-4 bg-white" style="font-size: 20px;">a is greater than b</div>
+    		<h4 class="py-3">For Loops</h4>
+    		<div class="p-3 bg-dark"> 
+    			<code class="text-light" style="font-size: 18px;">
+				fruits = ["apple", "banana", "cherry"] <br>
+				for x in fruits: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print(x)</p><br>
+				<p></p>				
+				for x in range(6):<br>
+  				<p style="display: inline-block;text-indent: 2em;" class="m-0">print(x) </p><br>
+    			</code>
+    		</div>
+    		<h4 class="py-3">Output</h4>
+    		<div class="shadow p-4 mb-4 bg-white" style="font-size: 20px;">
+				apple <br>
+				banana <br>
+				cherry <br>
+				0 <br>
+				1 <br>
+				2 <br>
+				3 <br>
+				4 <br>
+				5 <br>
+    		</div>
+    		<h4 class="py-3">Functions</h4>
+    		<div class="p-3 bg-dark"> 
+    			<code class="text-light" style="font-size: 18px;">
+				def my_function(x): <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">return 5 * x</p><br>
+				<p></p>
+				print(my_function(3))<br>
+				print(my_function(5))<br>
+				print(my_function(9))<br>
+    			</code>
+    		</div>
+    		<h4 class="py-3">Output</h4>
+    		<div class="shadow p-4 mb-4 bg-white" style="font-size: 20px;">
+				15<br>
+				25<br>
+				45<br>
+    		</div>
+    	</div><!--Code Syntax-->
+    	<div class="mt-5" id="quiz">
+    		<div class="bg-dark text-light text-center p-2" style="height: 120px;">
+    			<h3 class="">Test your Knowledge!</h3>
+    			  <button type="button" class="btn btn-light mt-2" data-toggle="modal" data-target="#myModal" id="ready">
+				    I'm Ready!
+				  </button>
+    		</div>
+			    		<!-- The Modal -->
+			<div class="modal" id="myModal">
+			<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+			      
+		    <!-- Modal Header -->
+		    <div class="modal-header">
+		         <h3 class="modal-title">Test your knowledge!</h3>
+		    </div>
+		        
+		    <!-- Modal body -->
+		    <div class="modal-body">
+		    	    <div class="p-3">
+	          	<h6>1. What's the output?</h6> <!--GEEKSFORGEEKS-->
+	          	<p>
+		          	a = True   <br>
+					b = False  <br>
+					c = False  <br>
+					<p></p>
+					if a or b and c: <br>
+					<p style="display: inline-block;text-indent: 2em;" class="m-0">print "GEEKSFORGEEKS"</p><br>
+					else: <br>
+					<p style="display: inline-block;text-indent: 2em;" class="m-0">print "geeksforgeeks"</p><br>
+	          	</p>
+	          	<div class="d-inline-block w-50 mx-0">
+		          	<div class="custom-control custom-radio m-2">
+				      	<input type="radio" class="custom-control-input" id="1a" name="code1">
+				      	<label class="custom-control-label" for="1a">geeksforgeeks</label>
+			    	</div>   	
+			    	<div class="custom-control custom-radio m-2">
+				      	<input type="radio" class="custom-control-input" id="1b" name="code1">
+				      	<label class="custom-control-label" for="1b">GEEKSFORGEEKS</label>
+			    	</div>             		
+	          	</div>
+	          	<div class="d-inline-block">
+	          		<div class="custom-control custom-radio m-2">
+				      	<input type="radio" class="custom-control-input" id="1c" name="code1">
+				      	<label class="custom-control-label" for="1c">No Output</label>
+			    	</div>   
+			    	<div class="custom-control custom-radio m-2">
+				      	<input type="radio" class="custom-control-input" id="1d" name="code1">
+				      	<label class="custom-control-label" for="1d">Error</label>
+			    	</div>    
+	          	</div>
+	        </div>
+	        <div class="p-3" style="clear: both;">
+	          	<h6>2. What's the output?</h6> <!--3-->
+	          	<p>
+				a = True <br>
+				b = False <br>
+				c = False <br>
+				<p></p>
+				if not a or b: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print 1</p><br>
+				elif not a or not b and c: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print 2</p><br>
+				elif not a or b or not b and a: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print 3</p><br>
+				else: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print 4</p><br>
+	          	</p>
+	          	<div class="custom-control custom-radio custom-control-inline w-25 mx-0">
+			      	<input type="radio" class="custom-control-input" id="2a" name="code2">
+			      	<label class="custom-control-label" for="2a">1</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio custom-control-inline w-25 mx-0">
+			      	<input type="radio" class="custom-control-input" id="2b" name="code2">
+			      	<label class="custom-control-label" for="2b">2</label>
+		    	</div>             		
+          		<div class="custom-control custom-radio custom-control-inline w-25 mx-0">
+			      	<input type="radio" class="custom-control-input" id="2c" name="code2">
+			      	<label class="custom-control-label" for="2c">3</label>
+		    	</div>   
+		    	<div class="custom-control custom-radio custom-control-inline">
+			      	<input type="radio" class="custom-control-input" id="2d" name="code2">
+			      	<label class="custom-control-label" for="2d">4</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>3. What's the output?</h6> <!--['ab', 'cd']-->
+	          	<p class="m-0">
+				x = ['ab', 'cd'] <br>
+				for i in x: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">i.upper()</p><br>
+				print(x) <br>
+	          	</p>
+	          	<div class="custom-control custom-radio custom-control-inline w-50 mx-0">
+			      	<input type="radio" class="custom-control-input" id="3a" name="code3">
+			      	<label class="custom-control-label" for="3a">['AB', 'CD']</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio custom-control-inline mx-0">
+			      	<input type="radio" class="custom-control-input" id="3b" name="code3">
+			      	<label class="custom-control-label" for="3b">['ab', 'cd']</label>
+		    	</div>             		
+          		<div class="custom-control custom-radio custom-control-inline w-50 mx-0">
+			      	<input type="radio" class="custom-control-input" id="3c" name="code3">
+			      	<label class="custom-control-label" for="3c">No Output</label>
+		    	</div>   
+		    	<div class="custom-control custom-radio custom-control-inline">
+			      	<input type="radio" class="custom-control-input" id="3d" name="code3">
+			      	<label class="custom-control-label" for="3d">Error</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>4. What's the output?</h6> <!--No Output/Error-->
+	          	<p class="m-0">
+				x = ['ab', 'cd']<br>
+				for i in x:<br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">x.append(i.upper())</p><br>
+				print(x) <br>
+	          	</p>
+	          	<div class="custom-control custom-radio custom-control-inline w-50 mx-0">
+			      	<input type="radio" class="custom-control-input" id="4a" name="code4">
+			      	<label class="custom-control-label" for="4a">['AB', 'CD']</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio custom-control-inline mx-0">
+			      	<input type="radio" class="custom-control-input" id="4b" name="code4">
+			      	<label class="custom-control-label" for="4b">['ab', 'cd']</label>
+		    	</div>             		
+          		<div class="custom-control custom-radio custom-control-inline w-50 mx-0">
+			      	<input type="radio" class="custom-control-input" id="4c" name="code4">
+			      	<label class="custom-control-label" for="4c">No Output</label>
+		    	</div>   
+		    	<div class="custom-control custom-radio custom-control-inline">
+			      	<input type="radio" class="custom-control-input" id="4d" name="code4">
+			      	<label class="custom-control-label" for="4d">Error</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>5. What's the output?</h6> <!--Error-->
+	          	<p class="m-0">
+				i = 1 <br>
+				while True: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">if i%3 == 0: </p><br>
+				<p style="display: inline-block;text-indent: 4em;" class="m-0">break</p><br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print(i) </p><br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">i + = 1 </p><br>
+	          	</p>
+	          	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="5a" name="code5">
+			      	<label class="custom-control-label" for="5a">1 <br> 2</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="5b" name="code5">
+			      	<label class="custom-control-label" for="5b">1 <br> 2 <br> 3</label>
+		    	</div>             		
+          		<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="5c" name="code5">
+			      	<label class="custom-control-label" for="5c">No Output</label>
+		    	</div>   
+		    	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="5d" name="code5">
+			      	<label class="custom-control-label" for="5d">Error</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>6. What's the output?</h6> <!--Error-->
+	          	<p class="m-0">
+				x = 123 <br>
+				for i in x: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print(i) </p><br>
+	          	</p>
+	          	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="6a" name="code6">
+			      	<label class="custom-control-label" for="6a">123</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="6b" name="code6">
+			      	<label class="custom-control-label" for="6b">1 <br> 2 <br> 3</label>
+		    	</div>             		
+          		<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="6c" name="code6">
+			      	<label class="custom-control-label" for="6c">No Output</label>
+		    	</div>   
+		    	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="6d" name="code6">
+			      	<label class="custom-control-label" for="6d">Error</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>7. What's the output?</h6> <!--4321-->
+	          	<p class="m-0">
+				for i in [1, 2, 3, 4][::-1]: <br>
+				<p style="display: inline-block;text-indent: 2em;" class="m-0">print (i)</p><br>
+	          	</p>
+	          	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="7a" name="code7">
+			      	<label class="custom-control-label" for="7a">4 <br> 3 <br> 2 <br> 1</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="7b" name="code7">
+			      	<label class="custom-control-label" for="7b">1 <br> 2 <br> 3 <br> 4</label>
+		    	</div>             		
+          		<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="7c" name="code7">
+			      	<label class="custom-control-label" for="7c">No Output</label>
+		    	</div>   
+		    	<div class="custom-control custom-radio custom-control-inline mx-0" style="width:23%">
+			      	<input type="radio" class="custom-control-input" id="7d" name="code7">
+			      	<label class="custom-control-label" for="7d">Error</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>8. What's the output?</h6> <!--[[[2, 3, 9]], [[2, 3, 9]], [[2, 3, 9]]]-->
+	          	<p class="m-0">
+				data = [2, 3, 9] <br>
+				temp = [[x for x in[data]] for x in range(3)] <br>
+				print(temp) <br>
+	          	</p>
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="8a" name="code8">
+			      	<label class="custom-control-label" for="8a">[[[2, 3, 9]], [[2, 3, 9]], [[2, 3, 9]]]</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="8b" name="code8">
+			      	<label class="custom-control-label" for="8b">[[2, 3, 9], [2, 3, 9], [2, 3, 9]]</label>
+		    	</div>             		
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="8c" name="code8">
+			      	<label class="custom-control-label" for="8c">[[[2, 3, 9]], [[2, 3, 9]]]</label>
+		    	</div>   
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="8d" name="code8">
+			      	<label class="custom-control-label" for="8d">None of these</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>9. What's the output?</h6> <!--[0, 2, 4]-->
+	          	<p class="m-0">
+				data = [x for x in range(5)] <br>
+				temp = [x for x in range(7) if x in data and x%2==0] <br>
+				print(temp) <br>
+	          	</p>
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="9a" name="code9">
+			      	<label class="custom-control-label" for="9a">[0, 2, 4, 6]</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="9b" name="code9">
+			      	<label class="custom-control-label" for="9b">[0, 2, 4]</label>
+		    	</div>             		
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="9c" name="code9">
+			      	<label class="custom-control-label" for="9c">[0, 1, 2, 3, 4, 5]</label>
+		    	</div>   
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="9d" name="code9">
+			      	<label class="custom-control-label" for="9d">Runtime error</label>
+		    	</div>    
+	        </div>
+	        <div class="p-3">
+	          	<h6>10. What's the output?</h6> <!--[‘G’, ‘F’, ‘G’]-->
+	          	<p class="m-0">
+				temp = ['Geeks', 'for', 'Geeks'] <br>
+				arr = [i[0].upper() for i in temp] <br>
+				print(arr) <br>
+	          	</p>
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="0a" name="code0">
+			      	<label class="custom-control-label" for="0a">[‘G’, ‘F’, ‘G’]</label>
+		    	</div>   	
+		    	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="0b" name="code0">
+			      	<label class="custom-control-label" for="0b">[‘GEEKS’]</label>
+		    	</div>             		
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="0c" name="code0">
+			      	<label class="custom-control-label" for="0c">[‘GEEKS’, ‘FOR’, ‘GEEKS’]</label>
+		    	</div>   
+	          	<div class="custom-control custom-radio m-2">
+			      	<input type="radio" class="custom-control-input" id="0d" name="code0">
+			      	<label class="custom-control-label" for="0d">Compilation error</label>
+		    	</div>    
+	        </div>
+		    </div>
+		        
+		    <!-- Modal footer -->
+		    <div class="modal-footer">
+		    	<button type="button" class="btn btn-dark" data-dismiss="modal" id="submit">Submit</button>
+		    </div>
+			       
+			</div>
+			</div>
+			</div> <!-- Modal-->
+
+    	</div><!--Take a Quiz-->
+    </div> <!--col-sm-8 p-5-->
+    <div class="card cardBox" style="display: none;" id="cardBox">
+	  <div class="card-header">
+	  	<h4 class="text-center">You got</h4>
+	  </div>
+	  <div class="card-body">
+	  	<h2 class="text-center" id="displayScore"></h2>
+	  </div>
+	  <div class="card-footer text-right">
+	  	<button type="button" class="btn btn-dark" id="okButton">Ok</button>
+	  </div>
+	</div>
+    <div class="spinner-grow text-secondary spinnerBox" style="display:none;"></div>
+    <div class="spinner-grow text-secondary spinnerBox" style="left: 48%;display: none;"></div>
+    <div class="spinner-grow text-secondary spinnerBox" style="left: 52%;display: none;"></div>
+ </div> <!--row-->
+</div> <!--div container fluid-->
+
+<script>
+
+$(document).ready(function(){
+	$('#submit').click(function() {
+		var score = 0;
+		if($('#1b').is(':checked')) {score++;}
+		if($('#2c').is(':checked')) {score++;}
+		if($('#3b').is(':checked')) {score++;}
+		if($('#4c').is(':checked') || $('#4d').is(':checked')) {score++;}
+		if($('#5d').is(':checked')) {score++;}
+		if($('#6d').is(':checked')) {score++;}
+		if($('#7a').is(':checked')) {score++;}
+		if($('#8a').is(':checked')) {score++;}
+		if($('#9b').is(':checked')) {score++;}
+		if($('#0a').is(':checked')) {score++;}
+		setTimeout(function(){
+		var spinners = document.getElementsByClassName("spinner-grow text-secondary spinnerBox");
+		for(var i = 0;i<3;i++){
+			spinners[i].style.display = "inline-block";
+		}
+		},500);
+		setTimeout(function(){
+		var spinners = document.getElementsByClassName("spinner-grow text-secondary spinnerBox");
+		for(var i = 0;i<3;i++){
+			spinners[i].style.display = "none";
+		}
+		},3000);
+		setTimeout(function(){
+		document.getElementById("cardBox").style.display = "inline-block";
+		$("#displayScore").text(String(score)+"/10");
+		},3200);
+	});
+	$('#okButton').click(function() {
+		document.getElementById("cardBox").style.display = "none";
+		document.getElementById("ready").innerHTML = "Try Again";
+		input = document.getElementsByTagName("input");
+		for(var i = 0;i<input.length;i++){
+			input[i].checked = false;
+		}
+	});
+});
+
+
+</script>
+
+</body>
+</html>
